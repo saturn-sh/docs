@@ -9,10 +9,14 @@
   - Adds their public key to `id_rsa.pub` and `authorized_keys`
   - Create public_html directory
   - Delete the signup log entry _after_ the approval is successful  
- - Example script usage:
+ - Manual approval of one user:
    - `./approve_user 9996d835-996e-4166-9c6d-a66d71a95aa7`
      - Parse the signup file for information
      - Delete the log after the creation process
+ - Semi-automatic approval of users:
+   - `./approve_queue`
+   - Cycles through all of the entries in signup log, displaying form submissions for manual review, and a simple [y/n]
+     prompt for whether to approve a user
   
 ## Misc
 - The default shell for new users should be bash, not ksh
